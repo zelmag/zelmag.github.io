@@ -38,3 +38,7 @@ h3 {
 div{
     margin-bottom: 20px;
 }
+.emphasis{
+    font-style: italic;
+    background-color: yellow;
+}
