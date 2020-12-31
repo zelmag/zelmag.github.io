@@ -6,6 +6,23 @@ body {
 	font-family: verdana, sans-serif;
 }
 
+.welcome_buttons {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	/* border: 1px solid black; */
+	table-layout: fixed; /* table is to take its dimensions from the <table> element's width and the width of the first row of cells*/
+}
+td {
+	width: 50%;
+}
+
+#skills{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px
+}
+
 h1 {
 	margin: 0 auto auto 0;
 	font-family: "Shadows Into Light Two", cursive;
@@ -28,17 +45,17 @@ h3 {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-    font-size: 15px;
-    background-color: #f1f3f4;
-    color: black;
-    border: 2px solid #2a7886;
-    border-radius: 2px solid  #2a7886;
+	font-size: 15px;
+	background-color: #f1f3f4;
+	color: black;
+	border: 2px solid #2a7886;
+	border-radius: 2px solid #2a7886;
 }
 
-div{
-    margin-bottom: 20px;
+div {
+	margin-bottom: 20px;
 }
-.emphasis{
-    font-style: italic;
-    background-color: yellow;
+.emphasis {
+	font-style: italic;
+	background-color: yellow;
 }
