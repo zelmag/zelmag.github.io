@@ -34,8 +34,8 @@
 		</head>
 
 		<body>
-			<h1>What day is it?</h1>
-			<button onclick="whatDay()">Try it</button>
+			<h1 class="m-3">What day is it?</h1>
+			<button class="ml-3" onclick="whatDay()">Try it</button>
 			<script type="text/javascript">
 				function whatDay() {
 					weekday = [
@@ -64,8 +64,9 @@
 					date = current_date.getDate();
 					month = month[current_date.getMonth()];
 					day = weekday[current_date.getDay()];
-					document.write("It's " +month+" "+date + ".\n");
-					document.write("Happy " + day + "!");
+					//Question. How do I center this? How do I make it styled/fonts like the rest?
+					document.write("<h1>It's " + month + " " + date + ".</h1>");
+					document.write("<h2>Happy " + day + "!</h2>");
 				}
 			</script>
 		</body>

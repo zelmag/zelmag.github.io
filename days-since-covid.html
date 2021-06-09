@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="description" content="Zelma's 100 websites" />
+			<meta name="author" content="Zelma Garza" />
+			<title>Zelma's Projects</title>
+			<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+			<link rel="stylesheet" href="assets/css/Navigation-Clean.css" />
+			<link rel="stylesheet" href="assets/css/styles.css" />
+			<link
+				rel="apple-touch-icon"
+				sizes="180x180"
+				href="favicon_io/apple-touch-icon.png"
+			/>
+			<link
+				rel="icon"
+				type="image/png"
+				sizes="32x32"
+				href="favicon_io/favicon-32x32.png"
+			/>
+			<link
+				rel="icon"
+				type="image/png"
+				sizes="16x16"
+				href="favicon_io/favicon-16x16.png"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light+Two&display=swap"
+				rel="stylesheet"
+			/>
+		</head>
+
+		<body>
+			<h1 class="m-3">How many days has it been since COVID?</h1>
+			<button class="btn btn-info btn-lg ml-3" onclick="howManyDays()">Tell Me</button>
+			<script type="text/javascript">
+				function howManyDays() {
+					covid_start = new Date("12/31/2019");
+					current_date = new Date();
+					// current_date = current_date.getDate();
+					difference_in_time = current_date - covid_start;
+					days_since = difference_in_time / (1000 * 3600 * 24);
+					document.write(
+						"<h1>It's been " + Math.round(days_since)+ " days since COVID.</h1>"
+					);
+					formatted_str = getFormatedStringFromDays(days_since);
+					document.write("<h2>That's "+formatted_str+".</h2>");
+					document.write("<h2>Wow. You've survived a lot!</h2>");
+					document.write('<img src="https://media2.giphy.com/media/W5ZUxqXT1lmiysXsDE/200.gif">');
+				}
+				function getFormatedStringFromDays(numberOfDays) {
+					var years = Math.floor(numberOfDays / 365);
+					var months = Math.floor((numberOfDays % 365) / 30);
+					var days = Math.floor((numberOfDays % 365) % 30);
+
+					var yearsDisplay =
+						years > 0 ? years + (years == 1 ? " year, " : " years, ") : "";
+					var monthsDisplay =
+						months > 0 ? months + (months == 1 ? " month, " : " months, ") : "";
+					var daysDisplay =
+						days > 0 ? days + (days == 1 ? " day" : " days") : "";
+					return yearsDisplay + monthsDisplay + daysDisplay;
+				}
+			</script>
+		</body>
+	</html>
+</html>
