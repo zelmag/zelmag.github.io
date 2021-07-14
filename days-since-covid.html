@@ -31,11 +31,26 @@
 				href="https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light+Two&display=swap"
 				rel="stylesheet"
 			/>
+			<script
+				src="https://kit.fontawesome.com/52e276fb65.js"
+				crossorigin="anonymous"
+			></script>
 		</head>
 
 		<body>
+			<!-- This is from Font awesome icons3 -->
+			<a href="projects.html" class="btn btn-sm ml-3 my-3 btn-dark">
+				<i class="fas fa-home"></i>
+				Home
+			</a>
+			<a href="what_day.html" class="btn btn-sm ml-3 btn-outline-light">
+				<span class="fas fa-arrow-left"></span>
+				Last Project
+			</a>
 			<h1 class="m-3">How many days has it been since COVID?</h1>
-			<button class="btn btn-info btn-lg ml-3" onclick="howManyDays()">Tell Me</button>
+			<button class="btn btn-info btn-lg ml-3" onclick="howManyDays()">
+				Tell Me
+			</button>
 			<script type="text/javascript">
 				function howManyDays() {
 					covid_start = new Date("12/31/2019");
@@ -44,12 +59,16 @@
 					difference_in_time = current_date - covid_start;
 					days_since = difference_in_time / (1000 * 3600 * 24);
 					document.write(
-						"<h1>It's been " + Math.round(days_since)+ " days since COVID.</h1>"
+						"<h1>It's been " +
+							Math.round(days_since) +
+							" days since COVID.</h1>"
 					);
 					formatted_str = getFormatedStringFromDays(days_since);
-					document.write("<h2>That's "+formatted_str+".</h2>");
+					document.write("<h2>That's " + formatted_str + ".</h2>");
 					document.write("<h2>Wow. You've survived a lot!</h2>");
-					document.write('<img src="https://media2.giphy.com/media/W5ZUxqXT1lmiysXsDE/200.gif">');
+					document.write(
+						'<img src="https://media2.giphy.com/media/W5ZUxqXT1lmiysXsDE/200.gif">'
+					);
 				}
 				function getFormatedStringFromDays(numberOfDays) {
 					var years = Math.floor(numberOfDays / 365);
